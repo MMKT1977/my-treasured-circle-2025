@@ -1,0 +1,167 @@
+/*HOME*/
+.home-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-main {
+  flex-grow: 1;
+  padding: 110px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.home-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.home-section-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1d4ed8;
+}
+
+.home-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .home-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 1.5rem;
+  padding: 2rem 0;
+  align-items: center;     
+  text-align: center;
+}
+
+.resource-card {
+  flex: 1 1 calc(33.333% - 1rem);
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+/* Hero Duo Section */
+.hero-duo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.hero-duo-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.hero-card {
+  flex: 1; /* Makes cards equal width */
+  min-width: 0; /* Prevents flex item overflow */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .hero-duo-cards {
+    flex-direction: column;
+  }
+  
+  .hero-card {
+    width: 100%;
+  }
+}
+.welcome-banner {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.welcome-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.welcome-image {
+  width: 50%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.welcome-text {
+  width: 50%;
+}
+
+.welcome-section .card {
+  /* Keep original card sizing */
+  width: auto; 
+  max-width: 100%;
+}
+
+.welcome-section .card-welcome img {
+  width: 100%;
+  height: 300px; /* Fixed height that works with your layout */
+  object-fit: cover; /* Fill the space while maintaining aspect ratio */
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* Ensure card content remains visible */
+.welcome-section .card-welcome {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem; /* Maintain your original padding */
+}
+
+@media (max-width: 768px) {
+  .welcome-content {
+    flex-direction: column;
+  }
+  
+  .welcome-image,
+  .welcome-text {
+    width: 100%;
+  }
+}
+.welcome-section {
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+/* Responsive fix for smaller screens */
+@media (max-width: 768px) {
+  .hero-duo .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
