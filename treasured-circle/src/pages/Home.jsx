@@ -2,6 +2,8 @@ import React from 'react';
 import './Home.css';
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot, faFileInvoiceDollar } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   const sections = [
@@ -11,21 +13,21 @@ export default function Home() {
       title: 'Empowering Hope, Healing Lives',
       description: 'Treasured Circle is a program approved service agency with a centered approach of offering the best support to individuals with intellectual and developmental disabilities.',
       buttonText: 'Explore Services',
-      href: '/services/residential' // Added proper href
+      href: '/services/residential' 
     },
     {
       title: 'Our Mission',
       image: '/mission.png',
       description: 'At Treasured Circle, our mission is to enrich the lives of all participants by providing personalized care services which promote independence, dignity, and well-being.',
       buttonText: 'Learn More',
-      href: '/about' // Added proper href
+      href: '/about' 
     },
     {
       title: 'From Our Team',
       image: '/team.png',
       description: 'With a commitment to compassion, professionalism, and excellence, we stand ready to embark on this journey with you.',
       buttonText: 'View Openings',
-      href: '/contact' // Added proper href (or careers page if you have one)
+      href: '/contact' 
     },
     {
       title: 'Online Therapy',
@@ -39,7 +41,7 @@ export default function Home() {
       title: 'Ready to Begin Your Healing Journey?',
       description: 'Connect with compassionate mental health professionals today.',
       buttonText: 'Contact Us',
-      href: '/contact', // Added proper href
+      href: '/contact', 
       fullWidth: true
     }
   ];
@@ -52,8 +54,9 @@ export default function Home() {
           <Card
             variant="welcome"
             image="/welcome.jpg.jpg"
-            title="Welcome to Treasured Circle"
-            description="At Treasured Circle, we're dedicated to providing exceptional support services for individuals with intellectual and developmental disabilities. Our person-centered approach ensures every individual receives the care and opportunities they deserve to thrive in their community."
+            title="“You Are Treasured Beyond Measure.”"
+            description="Treasured Circle is a program approved service agency with a centered goal of offering the best support to individuals with intellectual and developmental disabilities. Each individual will be assessed based on their needs, and paired with an experienced member of our team who can best support those needs. Whether it be in one of our residential settings,
+             in a participant’s home, in an independent living setting, or out in the community, we strive to create a nurturing environment where all individuals feel valued and supported."
           />
         </section>
 
@@ -64,18 +67,18 @@ export default function Home() {
             <Card
             className="hero-card"
             variant="hero"
-            image="/empower.png"
-            title="Empowering Hope, Healing Lives"
-            description="Treasured Circle is a program approved service agency with a centered approach of offering the best support to individuals with intellectual and developmental disabilities."
+            icon={faLocationDot}
+            title="Service Areas"
+            description="Adams, Arapahoe, Boulder, Broomfield, Denver, Douglas, Jefferson."
             buttonText="Explore Services"
             href="/services/respite" 
           />
           <Card
             className="hero-card"
             variant="hero"
-            image="/companionship.png"
-            title="Companionship & Social Support"
-            description="Loneliness can impact overall well-being, so our caregivers offer friendly companionship. Our caregivers provide compassionate support with daily personal care tasks."
+            icon={faFileInvoiceDollar}
+            title="Waivers Accepted"
+            description="HCBS-CES, HCBS-DD, HCBS-SLS, STATE SLS"
             buttonText="Discover More"
             href="/About"
           />

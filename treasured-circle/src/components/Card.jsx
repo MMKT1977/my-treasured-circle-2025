@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './Card.module.css';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // ✅ NEW
 
 const Card = ({
-  icon,
+  icon, // ✅ Already present
   image,
   title,
   description,
@@ -13,7 +14,7 @@ const Card = ({
   variant = 'default',
   fullWidth = false,
   className = '',
-  children // Add children prop
+  children
 }) => {
   const cardClass = [
     styles.card,
@@ -23,28 +24,36 @@ const Card = ({
 
   const cardContent = (
     <>
-      {/* Show image if passed */}
+      {/* ✅ Show image if passed */}
       {image && (
         <img
           src={image}
           alt={title || 'Card image'}
           className={
-            variant === 'welcome' ? styles['card-welcome-img'] :
-            variant === 'resources' ? styles.resourceImage : styles.image
+            variant === 'welcome'
+              ? styles['card-welcome-img']
+              : variant === 'resources'
+              ? styles.resourceImage
+              : styles.image
           }
         />
       )}
 
-      {/* Fallback to icon if image not present */}
-      {!image && icon && <div className={styles.iconContainer}>{icon}</div>}
+      {/* ✅ NEW: Show icon if image not passed */}
+      {!image && icon && (
+        <div className={styles.iconContainer}>
+          <FontAwesomeIcon icon={icon} className={styles.icon} />
+        </div>
+      )}
 
-      {/* Title */}
+      {/* ✅ Title */}
       {title && variant === 'resources' ? (
         <h3 className={styles.resourceTitle}>{title}</h3>
       ) : (
         <h3 className={styles.title}>{title}</h3>
       )}
 
+      {/* ✅ Description */}
       {description && variant !== 'resources' && (
         <p
           className={`${styles.description} ${
@@ -55,10 +64,10 @@ const Card = ({
         </p>
       )}
 
-      {/* Render children */}
+      {/* ✅ Children (if any) */}
       {children}
 
-      {/* Button or Link */}
+      {/* ✅ Button or Link */}
       {buttonText && variant !== 'resources' && (
         href ? (
           <Link

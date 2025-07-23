@@ -188,3 +188,15 @@
   border-radius: 8px;
   margin-bottom: 1.5rem;
 }
+/* ✅ Add to Card.module.css */
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.icon {
+  font-size: 48px;
+  color: #005aa7; /* customize as needed */
+}
