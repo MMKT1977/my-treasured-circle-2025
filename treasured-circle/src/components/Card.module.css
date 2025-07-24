@@ -62,7 +62,7 @@
 .cardButton,
 .heroButton {
   display: inline-block;
-  background-color: #1d4ed8;
+  background-color: orange;
   color: white;
   padding: 0.5rem 1.25rem;
   border-radius: 999px;
@@ -199,4 +199,45 @@
 .icon {
   font-size: 48px;
   color: #005aa7; /* customize as needed */
+}
+/* 🎯 Custom style for the Application Intro Card */
+.introCardCta {
+  background-color: #f0f9ff; /* Soft light blue */
+  color: #1e293b; /* Dark slate for readability */
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 1000px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.introCardCta p {
+  margin-bottom: 1rem;
+}
+
+.introCardCta ul,
+.introCardCta ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.introCardCta li {
+  margin-bottom: 0.5rem;
+}
+
+.introCardCta a {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.introCardCta strong {
+  color: #0f172a;
+}
+
+.introCardCta button {
+  margin-top: 2rem;
 }

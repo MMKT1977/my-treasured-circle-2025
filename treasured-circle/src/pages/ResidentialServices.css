@@ -39,8 +39,11 @@
 
 .feature-icon {
   font-size: 2rem;
-  color: #3a7bfd;
+  color: #00bcd4 !important;
   margin-bottom: 0.5rem;
+}
+.feature-item:hover .feature-icon {
+  color: orange !important; /* Slightly lighter cyan on hover */
 }
 
 .contact-button-container {
@@ -59,5 +62,6 @@
 }
 
 .contact-button:hover {
-  background-color: #2f66d4;
+  background-color: orange !important;
+  color:black !important;
 }
